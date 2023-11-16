@@ -1,0 +1,46 @@
+@import "../../../styles/app/_variables";
+.layout {
+  .header {
+    height: 60px;
+    background: $primary;
+  }
+
+  section {
+    display: grid;
+    grid: "sidebar body" 1fr / auto 1fr;
+    .sidebar {
+      grid-area: sidebar;
+      width: 80px;
+      background: $primary;
+
+      .nav {
+        flex-wrap: nowrap;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        li {
+          display: block;
+          position: relative;
+          transition: background-color .2s ease-in-out 0s;
+
+          .active,
+          &:hover {
+            background: $secondary;
+            transition: background-color .2s ease-in-out 0s;
+          }
+
+          a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            text-decoration: none;
+            color: white;
+            height: 80px;
+          }
+        }
+      }
+    }
+  }
+}

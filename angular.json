@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-senarios": {
+    "ngx-scenarios": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngx-senarios",
+            "outputPath": "dist/ngx-scenarios",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -26,11 +26,10 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles/styles.scss"
             ],
             "scripts": []
           },
@@ -46,6 +45,12 @@
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
                   "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
                 }
               ],
               "outputHashing": "all"
@@ -65,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ngx-senarios:build:production"
+              "browserTarget": "ngx-scenarios:build:production"
             },
             "development": {
-              "browserTarget": "ngx-senarios:build:development"
+              "browserTarget": "ngx-scenarios:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +81,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngx-senarios:build"
+            "browserTarget": "ngx-scenarios:build"
           }
         },
         "test": {
