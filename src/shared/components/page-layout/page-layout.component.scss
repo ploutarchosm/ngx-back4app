@@ -11,8 +11,8 @@
     .sidebar {
       grid-area: sidebar;
       width: 80px;
-      background: $primary;
-
+      background: white;
+      border-right: 1px solid hsl(198, 0%, 80%);
       .nav {
         flex-wrap: nowrap;
         overflow-y: auto;
