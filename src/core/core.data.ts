@@ -1,4 +1,4 @@
-import {IThemeOptions} from "@core/interfaces/core-config.interface";
+import { IThemeOptions } from '@core/interfaces/core-config.interface';
 
 export const themeList: IThemeOptions[] = [
   { label: '_i18n.Light', value: 'light' },

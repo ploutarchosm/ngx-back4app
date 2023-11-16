@@ -8,7 +8,7 @@ describe('PageLayoutComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PageLayoutComponent]
+      declarations: [PageLayoutComponent],
     });
     fixture = TestBed.createComponent(PageLayoutComponent);
     component = fixture.componentInstance;

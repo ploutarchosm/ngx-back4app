@@ -1,9 +1,13 @@
-import {fromEvent, map, merge, Observable, Subject, switchMap} from "rxjs";
-import {ColorScheme, IThemeOptions, ThemeType} from "@core/interfaces/core-config.interface";
-import {Store} from "@ngxs/store";
-import { MediaMatcher } from "@angular/cdk/layout";
-import {publishRef} from "@utils/rxjs-share.utils";
-import {themeList} from "@core/core.data";
+import { fromEvent, map, merge, Observable, Subject, switchMap } from 'rxjs';
+import {
+  ColorScheme,
+  IThemeOptions,
+  ThemeType,
+} from '@core/interfaces/core-config.interface';
+import { Store } from '@ngxs/store';
+import { MediaMatcher } from '@angular/cdk/layout';
+import { publishRef } from '@utils/rxjs-share.utils';
+import { themeList } from '@core/core.data';
 
 export class CoreBaseClass {
   public defaultLang$: Observable<string>;
@@ -19,18 +23,27 @@ export class CoreBaseClass {
     this.defaultTheme$ = store.select(state => state.core.defaultTheme);
     this.dark = mdr.matchMedia('(prefers-color-scheme: dark)');
     const systemThemeChanged$ = fromEvent(this.dark, 'change');
-    this.applicationTheme$ = merge(this.defaultTheme$, systemThemeChanged$).pipe(
+    this.applicationTheme$ = merge(
+      this.defaultTheme$,
+      systemThemeChanged$
+    ).pipe(
       switchMap(() => this.defaultTheme$),
       map((themeValue: ThemeType) => {
         // if the theme value is unknown revert to default theme
-        return themeList.some((theme: IThemeOptions) => theme.value === themeValue) ? themeValue : this.defaultTheme;
+        return themeList.some(
+          (theme: IThemeOptions) => theme.value === themeValue
+        )
+          ? themeValue
+          : this.defaultTheme;
       }),
       publishRef()
     );
 
-    this.applicationColorScheme$ = this.applicationTheme$.pipe(map(
-      selectedTheme => (selectedTheme === 'system' ? this.systemTheme : selectedTheme)
-    ));
+    this.applicationColorScheme$ = this.applicationTheme$.pipe(
+      map(selectedTheme =>
+        selectedTheme === 'system' ? this.systemTheme : selectedTheme
+      )
+    );
   }
 
   get systemTheme(): ColorScheme {

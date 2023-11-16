@@ -1,4 +1,4 @@
-import {ThemeType} from "@core/interfaces/core-config.interface";
+import { ThemeType } from '@core/interfaces/core-config.interface';
 
 export namespace CoreActions {
   export class ActionLanguageCore {
