@@ -10,7 +10,7 @@ const routes: Routes = [
   {
     path: '',
     component: PageLayoutComponent,
-    title: 'Home',
+    title: '_i18n.Dashboard',
     children: [{ path: '', component: DashboardComponent }],
   },
   { path: '**', redirectTo: '', pathMatch: 'full' },

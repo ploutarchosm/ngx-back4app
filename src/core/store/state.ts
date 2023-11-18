@@ -8,8 +8,7 @@ import { CoreActions } from '@core/store/actions';
   defaults: {
     applicationName: 'NGX-SCENARIOS',
     supportedLanguages: ['en-US'],
-    defaultLanguage: 'en-US',
-    defaultTheme: 'light',
+    defaultLanguage: 'en-US'
   },
 })
 @Injectable()
@@ -24,16 +23,5 @@ export class CoreState {
       defaultLanguage: action.language,
     });
     console.log(ctx.getState());
-  }
-
-  @Action(CoreActions.ActionThemeCore)
-  changeTheme(
-    ctx: StateContext<CoreStateModel>,
-    action: CoreActions.ActionThemeCore
-  ) {
-    ctx.setState({
-      ...ctx.getState(),
-      defaultTheme: action.theme,
-    });
   }
 }

@@ -1,45 +1,22 @@
 @import "../../../styles/app/_variables";
 .layout {
-  .header {
-    height: 60px;
-    background: $primary;
+  .sidebar {
+    width: 218px;
+    height: auto;
+    flex-shrink: 0;
+    background: var(--bs-white, #FFF);
+    .logo {
+      padding: 50.37px 70px;
+    }
   }
-
-  section {
-    display: grid;
-    grid: "sidebar body" 1fr / auto 1fr;
-    .sidebar {
-      grid-area: sidebar;
-      width: 80px;
-      background: white;
-      border-right: 1px solid hsl(198, 0%, 80%);
-      .nav {
-        flex-wrap: nowrap;
-        overflow-y: auto;
-        overflow-x: hidden;
-
-        li {
-          display: block;
-          position: relative;
-          transition: background-color 0.2s ease-in-out 0s;
-
-          .active,
-          &:hover {
-            color: #303030;
-            background: rgba(0, 0, 0, 0.075);
-            transition: background-color 0.2s ease-in-out 0s;
-          }
-
-          a {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            text-decoration: none;
-            color: #222222;
-            height: 80px;
-          }
+  .body {
+    padding: 30px;
+    flex-grow: 1;
+    .top {
+      margin-bottom: 30px;
+      .title {
+        h2 {
+          color: var(--bs-primary, #6E39CB);
         }
       }
     }

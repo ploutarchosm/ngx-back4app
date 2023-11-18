@@ -4,7 +4,7 @@ import { PageLayoutComponent } from '@shared/components/page-layout/page-layout.
 import { RouterModule } from '@angular/router';
 import {
   AppFaRegularChartWaterfallComponent,
-  AppFaRegularGaugeComponent,
+  AppFaRegularGaugeComponent, AppLogoComponent,
 } from '@shared/icons';
 import { PageSidebarComponent } from './components/page-sidebar/page-sidebar.component';
 import { TranslateModule } from '@ngx-translate/core';
@@ -12,6 +12,7 @@ import { TranslateModule } from '@ngx-translate/core';
 const IconList = [
   AppFaRegularChartWaterfallComponent,
   AppFaRegularGaugeComponent,
+  AppLogoComponent
 ];
 
 @NgModule({
