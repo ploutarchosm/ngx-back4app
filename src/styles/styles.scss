@@ -1,7 +1,11 @@
+@import "./app/_fonts";
 @import "./vendors/_bootstrap";
+@import "./app/_inputs";
+
 
 body,
 html {
   min-height: 100vh;
   height: auto;
+  font-family: 'Lato', sans-serif;
 }

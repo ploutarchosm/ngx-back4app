@@ -1,3 +1,7 @@
 {
-  "_i18n": {}
+  "_i18n": {
+    "Dashboard": "Dashboard",
+    "Scenarios": "Scenarios",
+    "DashboardCardTotalScenarios": "Total Scenarios"
+  }
 }

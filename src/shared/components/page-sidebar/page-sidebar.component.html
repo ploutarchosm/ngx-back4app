@@ -1,0 +1,15 @@
+<ul class="nav flex-column h-100">
+  <li class="nav-item fs-14">
+    <a routerLink="/dashboard" routerLinkActive="active">
+      <app-fa-regular-gauge class="fillDarkGray mb-1"></app-fa-regular-gauge>
+      <span>{{ '_i18n.Dashboard' | translate }}</span>
+    </a>
+  </li>
+  <li class="nav-item fs-14">
+    <a routerLink="/scenarios" routerLinkActive="active">
+      <app-fa-regular-chart-waterfall
+        class="fillDarkGray mb-1"></app-fa-regular-chart-waterfall>
+      <span>{{ '_i18n.Scenarios' | translate }}</span>
+    </a>
+  </li>
+</ul>

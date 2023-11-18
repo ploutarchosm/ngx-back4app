@@ -1,7 +1,7 @@
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { PageLayoutComponent } from './page-layout.component';
-import {SharedModule} from "@shared/shared.module";
+import { SharedModule } from '@shared/shared.module';
 
 describe('PageLayoutComponent', () => {
   let component: PageLayoutComponent;
@@ -9,7 +9,7 @@ describe('PageLayoutComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [SharedModule]
+      imports: [SharedModule],
     });
     fixture = TestBed.createComponent(PageLayoutComponent);
     component = fixture.componentInstance;
