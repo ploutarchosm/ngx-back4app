@@ -17,12 +17,15 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [DashboardComponent],
-  imports: [
-    SharedModule,
-    RouterModule.forChild(routes),
-    CommonModule,
-    TranslateModule,
-  ],
+    declarations: [DashboardComponent],
+    imports: [
+        SharedModule,
+        RouterModule.forChild(routes),
+        CommonModule,
+        TranslateModule,
+    ],
+    exports: [
+        DashboardComponent
+    ]
 })
 export class DashboardModule {}

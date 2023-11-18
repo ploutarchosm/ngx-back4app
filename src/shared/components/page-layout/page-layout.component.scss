@@ -22,3 +22,55 @@
     }
   }
 }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+    li {
+      display: flex;
+      width: 206px;
+      height: 40px;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 15px;
+      flex-shrink: 0;
+      position: relative;
+      a {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        color: var(--bs-body-color);
+        text-decoration: none;
+        padding: 11px 8px 11px 5px;
+        height: 40px;
+
+        &.active {
+          border-radius: 8px;
+          background: var(--primary-shades-shade-7, #DECCFE);
+          color: var(--bs-primary);
+            &::before {
+              width: 6px;
+              height: 40px;
+              flex-shrink: 0;
+              border-radius: 0px 20px 20px 0px;
+              background: var(--brand-primary, #6E39CB);
+              display: flex;
+              content: '';
+              position: absolute;
+              left: 0;
+            }
+
+          svg {
+            fill: var(--brand-primary, #6E39CB);
+          }
+        }
+          app-dashboard {
+            line-height: 1;
+          }
+          span {
+            margin-left: 8px;
+          }
+      }
+    }
+}

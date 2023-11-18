@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PageLayoutComponent } from '@shared/components/page-layout/page-layout.component';
 import { RouterModule } from '@angular/router';
 import {
+  AppDashboardComponent,
   AppFaRegularChartWaterfallComponent,
   AppFaRegularGaugeComponent, AppLogoComponent,
 } from '@shared/icons';
@@ -12,7 +13,8 @@ import { TranslateModule } from '@ngx-translate/core';
 const IconList = [
   AppFaRegularChartWaterfallComponent,
   AppFaRegularGaugeComponent,
-  AppLogoComponent
+  AppLogoComponent,
+  AppDashboardComponent
 ];
 
 @NgModule({
