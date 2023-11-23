@@ -1,5 +1,5 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {Title} from "@angular/platform-browser";
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-page-layout',

@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { PageSidebarComponent } from './page-sidebar.component';
-import { SharedModule } from "@shared/shared.module";
-import { RouterTestingModule } from "@angular/router/testing";
-import {TranslateModule} from "@ngx-translate/core";
+import { SharedModule } from '@shared/shared.module';
+import { RouterTestingModule } from '@angular/router/testing';
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('PageSidebarComponent', () => {
   let component: PageSidebarComponent;
@@ -11,7 +11,7 @@ describe('PageSidebarComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [SharedModule, RouterTestingModule, TranslateModule.forRoot()],
-      declarations: [PageSidebarComponent]
+      declarations: [PageSidebarComponent],
     });
     fixture = TestBed.createComponent(PageSidebarComponent);
     component = fixture.componentInstance;

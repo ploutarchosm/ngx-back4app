@@ -1,32 +1,33 @@
-<div class="layout d-flex vh-100">
-  <div class="sidebar">
-    <div class="logo">
-      <app-logo></app-logo>
-    </div>
-    <ul class="h-100 fs-14 d-flex flex-column">
-      <li class="nav-item">
-        <div class="frame"></div>
-        <a routerLink="/dashboard" routerLinkActive="active">
-          <app-dashboard></app-dashboard>
-          <span>{{ '_i18n.Dashboard' | translate }}</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <div class="frame"></div>
-        <a routerLink="/test" routerLinkActive="active">
-          <app-dashboard></app-dashboard>
-          <span>{{ '_i18n.Dashboard' | translate }}</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="body">
-    <div class="top d-flex align-items-center">
-      <div class="title flex-grow-1">
-        <h2 class="mb-0">{{ pageTitle }}</h2>
-      </div>
-      <div class="profile">Profile</div>
-    </div>
-    <router-outlet></router-outlet>
-  </div>
-</div>
+<!--<div class="layout d-flex vh-100">-->
+<!--  <div class="sidebar">-->
+<!--    <div class="logo">-->
+<!--      <app-logo></app-logo>-->
+<!--    </div>-->
+<!--    <ul class="h-100 fs-14 d-flex flex-column">-->
+<!--      <li class="nav-item">-->
+<!--        <div class="frame"></div>-->
+<!--        <a routerLink="/dashboard" routerLinkActive="active">-->
+<!--          <app-dashboard></app-dashboard>-->
+<!--          <span>{{ '_i18n.Dashboard' | translate }}</span>-->
+<!--        </a>-->
+<!--      </li>-->
+<!--      <li class="nav-item">-->
+<!--        <div class="frame"></div>-->
+<!--        <a routerLink="/test" routerLinkActive="active">-->
+<!--          <app-dashboard></app-dashboard>-->
+<!--          <span>{{ '_i18n.Dashboard' | translate }}</span>-->
+<!--        </a>-->
+<!--      </li>-->
+<!--    </ul>-->
+<!--  </div>-->
+<!--  <div class="body">-->
+<!--    <div class="top d-flex align-items-center">-->
+<!--      <div class="title flex-grow-1">-->
+<!--        <h2 class="mb-0">{{ pageTitle }}</h2>-->
+<!--      </div>-->
+<!--      <div class="profile">Profile</div>-->
+<!--    </div>-->
+<!--    <router-outlet></router-outlet>-->
+<!--  </div>-->
+<!--</div>-->
+<router-outlet></router-outlet>
